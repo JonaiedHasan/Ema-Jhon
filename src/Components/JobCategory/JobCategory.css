@@ -7,9 +7,15 @@
 
 
 .category{
+    /* width: 300px; */
     padding: 40px 40px 32px 40px;
+    min-width: 265px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     background-color:rgb(241, 241, 241);
     border-radius: 8px;
+    /* margin-left: 5px; */
+    /* margin-right: 5px; */
 }
 .category-logo{
     width: 70px;

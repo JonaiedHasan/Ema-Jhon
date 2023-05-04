@@ -24,3 +24,8 @@ a {
     text-decoration: none;
 }
 
+@media only screen and (max-width:764px) {
+    .nav-a, a{
+        display: block;
+    }
+}

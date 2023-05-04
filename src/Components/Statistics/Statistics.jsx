@@ -13,8 +13,10 @@ const data = [
 const Statistics = () => {
     return (
      
-     <AreaChart
-     width={500}
+    <div className='mt-4 width:100%'>
+        <h1 className='text-center my-3'> Rechart of my Assignment Mark</h1>
+         <AreaChart
+     width={300}
      height={400}
      data={data}
      margin={{
@@ -24,13 +26,13 @@ const Statistics = () => {
             bottom: 0,
           }}>
 
-      <CartesianGrid strokeDasharray="3 3" />      
+      <CartesianGrid strokeDasharray="1 1" />      
       <XAxis dataKey="name"/>
       <YAxis/>
       <Tooltip/>
-      <Area  type="monotone" dataKey="value" stroke="#8884d8" fill="#8884d8"/>
+      <Area  type="monotone" dataKey="value" stroke="#8884d8" fill=" #6ce4ff"/>
      </AreaChart>  
-     
+    </div>
     );
 };
 

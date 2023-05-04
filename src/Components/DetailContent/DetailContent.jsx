@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './DetailContent.css'
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import { addToDb } from '../utilites/fakedb';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faLocationDot,faDollarSign,faEnvelope, faPhone, faCalendarDays} from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -52,14 +54,14 @@ const handleProducts = (product) =>{
                     <div className='d-cart p-4'>
                         <h4 className='fw-bold'>Job Details</h4>
                         <hr />
-                        <p> <span className='fs-5 fw-semibold'>Salary : </span>{info.salary}(Per Month)</p>
-                        <p> <span className='fs-5 fw-semibold'>Job Title : </span>{info.jobTitle}</p>
+                        <p> <span className='fs-5 fw-semibold'><FontAwesomeIcon icon={ faDollarSign} /> Salary : </span>{info.salary}(Per Month)</p>
+                        <p> <span className='fs-5 fw-semibold'><FontAwesomeIcon icon={ faCalendarDays} /> Job Title : </span>{info.jobTitle}</p>
 
                         <h4 className='fw-bold'>Contact Information</h4>
                         <hr />
-                        <p> <span className='fs-5 fw-semibold'>Phone : </span> {info.phone}</p>
-                        <p> <span className='fs-5 fw-semibold'>Email : </span>{info.email}</p>
-                        <p> <span className='fs-5 fw-semibold'>Address : </span>{info.location}</p>
+                        <p> <span className='fs-5 fw-semibold'><FontAwesomeIcon icon={ faPhone} />  Phone : </span> {info.phone}</p>
+                        <p> <span className='fs-5 fw-semibold'><FontAwesomeIcon icon={ faEnvelope} /> Email : </span>{info.email}</p>
+                        <p> <span className='fs-5 fw-semibold'><FontAwesomeIcon icon={ faLocationDot} />  Address : </span>{info.location}</p>
                     </div>
                     
                     <Link to='/appliedjobs'><button onClick={()=>handleProducts(info)} className='btn-applyNOW'>Apply Now</button></Link>

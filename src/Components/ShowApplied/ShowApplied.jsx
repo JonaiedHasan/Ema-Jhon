@@ -1,10 +1,13 @@
 import React from 'react';
 import './ShowApplied.css'
 import { Link } from 'react-router-dom';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faLocationDot,faDollarSign} from '@fortawesome/free-solid-svg-icons'
 const ShowApplied = ({ job }) => {
     const { jobTitle, id, companyLogo, companyName, jobType, jobTime, location, salary } = job;
     return (
-        <div className='container job-container'>
+        <div className='md:container job-container'>
             <div className='cart d-flex my-4'>
                 <div className='img-div'>
                     <img className=' ' src={companyLogo} alt="" />
@@ -21,8 +24,8 @@ const ShowApplied = ({ job }) => {
                         </div>
                     </div>
                     <div className='d-flex gap-4'>
-                        <h5 className='light-dark'>{location}</h5>
-                        <h5 className='light-dark'>Salary: {salary}</h5>
+                        <h5 className='light-dark'><FontAwesomeIcon icon={ faLocationDot} />  {location}</h5>
+                        <h5 className='light-dark'><FontAwesomeIcon icon={ faDollarSign} />  Salary: {salary}</h5>
                     </div>
                 </div>
                 <Link to={`/details/${id}`}><button className='btn-detail'>View Details</button> </Link>
